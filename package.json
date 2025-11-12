@@ -1,0 +1,45 @@
+{
+  "name": "sudanese-teacher",
+  "displayName": "المعلم السوداني",
+  "version": "1.0.0",
+  "description": "AI-powered educational tutor for the Sudanese curriculum",
+  "type": "module",
+  "private": true,
+  "author": "Sudanese Education Team",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/sudatutor-v6.git"
+  },
+  "keywords": [
+    "education",
+    "sudan",
+    "curriculum",
+    "ai",
+    "tutor",
+    "gemini",
+    "react",
+    "arabic"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "setup:store": "node scripts/create-filestore.js",
+    "upload:curriculum": "node scripts/upload-curriculum.js",
+    "check:store": "node scripts/check-store.js",
+    "clean:stores": "node scripts/cleanup-rag-stores.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "formdata-node": "^6.0.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
