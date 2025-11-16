@@ -1,6 +1,6 @@
 <div align="center">
 
-# المعلم السوداني (Sudanese Teacher)
+# المعلم السوداني الذكى (Sudanese AI Teacher)
 
 
 
