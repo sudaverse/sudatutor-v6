@@ -52,3 +52,9 @@ coverage
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+# Curriculum content - large textual files - not needed in the repository
+curriculum-data/
+
+# Ignore internal docs and markdown files not required by end users
+*.md
+!README.md

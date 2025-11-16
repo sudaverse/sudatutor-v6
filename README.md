@@ -12,6 +12,31 @@
 **AI-powered educational tutor for the Sudanese curriculum**  
 مساعد تعليمي ذكي مدعوم بالذكاء الاصطناعي للمناهج السودانية
 
+<!-- USER HIGHLIGHT -->
+## 👩‍🎓 For students and teachers (quick)
+
+- 🎒 For students: Choose your grade and subject, ask questions in Arabic or English and get sources and citations from the official curriculum.
+- 🧑‍🏫 For teachers: Monitor topic coverage, review common questions, and reuse the curriculum for classroom programs.
+
+## ⚡ Quick start (user-focused)
+
+1. Install dependencies:
+   ```powershell
+   npm install
+   ```
+2. Create a local env file with your API key (copy the example):
+   ```powershell
+   cp .env.example .env.local
+   # Edit .env.local and add GEMINI_API_KEY=your-api-key-here
+   ```
+3. Start dev server:
+   ```powershell
+   npm run dev
+   # Open http://localhost:3000
+   ```
+
+This README focuses on user-facing setup — developer docs are available separately (and will be hidden from this repo if you prefer to keep the curriculum files private). If you want to run the curriculum upload scripts, see the `scripts/` folder.
+
 [Features](#-features) • [Quick Start](#-quick-start) • [Documentation](#-documentation) • [Production Deployment](#-production-deployment)
 
 </div>
