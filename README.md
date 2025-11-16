@@ -180,7 +180,24 @@ export const CONFIG = {
 
 ---
 
-## 📚 Documentation
+## � Visual Walkthrough (images)
+
+Below are quick screenshots to show basic usage. The images are in `screenshots/` and show a minimal flow for users.
+
+- Step 1: Select your grade and subject — then click Start
+
+![Step 1 - Selection screen](screenshots/step-1-selection.svg)
+
+- Step 2: Type a question and press Enter
+
+![Step 2 - Chat results](screenshots/step-2-chat.svg)
+
+- Step 3: Each answer includes a source citation
+
+![Step 3 - Citation example](screenshots/step-3-citation.svg)
+
+
+## �📚 Documentation
 
 ### File Search Store Setup
 
