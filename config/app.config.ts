@@ -5,7 +5,7 @@
 
 export const CONFIG = {
   // File Search Store configuration
-  FILE_SEARCH_STORE_NAME: 'fileSearchStores/sudan-curriculum-file-searc-0yuzv4zzxz09',
+  FILE_SEARCH_STORE_NAME: 'fileSearchStores/sudan-curriculum-file-searc-1es7p89safsi',
   
   // Gemini AI configuration
   GEMINI_MODEL: 'gemini-2.5-flash',

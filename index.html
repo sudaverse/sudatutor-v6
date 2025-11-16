@@ -17,18 +17,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- KaTeX for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              'gem-onyx': '#F0F4F8', // Light blue-gray background
-              'gem-slate': '#FFFFFF', // White for cards/bubbles
-              'gem-mist': '#D9E2EC', // Borders and dividers
-              'gem-offwhite': '#1A202C', // Dark gray text
-              'gem-teal': '#50E3C2', // Accent color
-              'gem-blue': '#4A90E2', // Primary interactive color
+              'gem-onyx': '#F5F7FA', // Soft light background with warm undertone
+              'gem-slate': '#FFFFFF', // Pure white for cards/bubbles
+              'gem-mist': '#E1E8ED', // Soft borders and dividers
+              'gem-offwhite': '#2D3748', // Comfortable dark gray text
+              'gem-teal': '#38B2AC', // Warm teal accent
+              'gem-blue': '#4299E1', // Friendly blue for primary actions
             },
             fontFamily: {
               sans: ['Cairo', 'sans-serif'],
