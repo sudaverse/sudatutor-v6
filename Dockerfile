@@ -17,12 +17,16 @@ ENV NODE_ENV=${NODE_ENV}
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies (including dev dependencies for build)
-# Use npm install instead of npm ci for compatibility without lock file
-RUN npm install
+# Install ALL dependencies including devDependencies (needed for Vite build)
+# Force production=false to ensure devDependencies are installed
+RUN npm install --include=dev
 
 # Copy source files
 COPY . .
+
+# Verify Vite is installed
+RUN which vite || echo "Vite not found in PATH, checking node_modules..." && \
+    ls -la node_modules/.bin/vite || echo "Vite binary not found!"
 
 # Build the application (Vite will inject env vars at build time)
 RUN npm run build
