@@ -725,25 +725,6 @@ Contributions are welcome! Please follow these steps:
 
 This project is licensed under the **Apache License 2.0** - see the LICENSE file for details.
 
----
-
-## � Screenshots and quick walkthrough
-
-Below are a few screenshots to help users get started — add the files to `screenshots/` in the repo if you want them versioned; otherwise replace the paths below with externally hosted images.
-
-- Step 1: Select grade and subject
-
-![Step 1 - Selection screen](screenshots/step-1-selection.png)
-
-- Step 2: Ask a question and receive a curriculum-based answer
-
-![Step 2 - Chat results](screenshots/step-2-chat.png)
-
-- Step 3: View source citations from the curriculum documents
-
-![Step 3 - Citation example](screenshots/step-3-citation.png)
-
-Small tip: if you want to include high-resolution screenshots, create the folder `screenshots/` and add `.png` files with the names above — they will show up on GitHub and in the repository documentation.
 
 ---
 
