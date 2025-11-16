@@ -8,6 +8,10 @@
 ![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)
 ![Docker](https://img.shields.io/badge/docker-ready-blue.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-19.2.0-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6.2.0-646CFF?logo=vite&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-API-orange)
 
 **AI-powered educational tutor for the Sudanese curriculum**  
 مساعد تعليمي ذكي مدعوم بالذكاء الاصطناعي للمناهج السودانية
