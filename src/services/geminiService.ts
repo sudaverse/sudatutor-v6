@@ -9,10 +9,12 @@ import CONFIG from '../../config/app.config';
 let ai: GoogleGenAI;
 
 export function initialize() {
-    if (!process.env.API_KEY) {
-        throw new Error("API_KEY environment variable not set.");
+    // Support both GEMINI_API_KEY (recommended) and API_KEY (legacy)
+    const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
+    if (!apiKey) {
+        throw new Error("GEMINI_API_KEY (or API_KEY) environment variable not set.");
     }
-    ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    ai = new GoogleGenAI({ apiKey });
 }
 
 export async function fileSearch(grade: string, subject: string, query: string, history: ChatMessage[]): Promise<QueryResult> {
