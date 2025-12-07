@@ -115,7 +115,7 @@ const App: React.FC = () => {
     }
 
     return (
-        <main className="h-screen bg-gem-onyx text-gem-offwhite">
+        <main className="h-full flex flex-col bg-gem-onyx text-gem-offwhite">
             {renderContent()}
         </main>
     );

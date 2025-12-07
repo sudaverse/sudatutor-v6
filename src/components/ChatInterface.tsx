@@ -170,37 +170,35 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ grade, subject, history, 
     }, []);
 
     return (
-        <div className="flex flex-col h-full relative bg-gradient-to-br from-gem-onyx via-gem-onyx to-blue-50">
-            {/* Enhanced Header with Gradient */}
-            <header className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-r from-gem-blue/95 to-gem-teal/95 backdrop-blur-md z-10 shadow-lg border-b border-white/20">
-                <div className="w-full max-w-4xl mx-auto flex justify-between items-center px-4">
-                    <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+        <div className="flex flex-col h-full w-full bg-gradient-to-br from-gem-onyx via-gem-onyx to-blue-50">
+            {/* Fixed Header */}
+            <header className="flex-shrink-0 bg-gradient-to-r from-gem-blue/95 to-gem-teal/95 backdrop-blur-md shadow-lg border-b border-white/20 sticky top-0 z-10">
+                <div className="w-full max-w-4xl mx-auto flex justify-between items-center px-3 sm:px-4 py-3">
+                    <div className="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse min-w-0 flex-1">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
                             </svg>
                         </div>
-                        <div>
-                            <h1 className="text-xl md:text-2xl font-bold text-white" title={`مادة ${subject} - ${grade}`}>
+                        <div className="min-w-0 flex-1">
+                            <h1 className="text-base sm:text-xl md:text-2xl font-bold text-white truncate" title={`مادة ${subject} - ${grade}`}>
                                 {subject} - {grade}
                             </h1>
-                            <p className="text-xs text-white/80">مساعدك التعليمي الذكي 🎓</p>
+                            <p className="text-xs text-white/80 hidden sm:block">مساعدك التعليمي الذكي 🎓</p>
                         </div>
                     </div>
                     <button
                         onClick={onNewChat}
-                        className="flex items-center px-4 py-2 bg-white/20 hover:bg-white/30 rounded-full text-white transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 flex-shrink-0"
+                        className="flex items-center px-3 sm:px-4 py-2 bg-white/20 hover:bg-white/30 rounded-full text-white transition-all duration-200 shadow-lg hover:shadow-xl flex-shrink-0 ml-2"
                         title="إنهاء الدردشة الحالية وبدء دردشة جديدة"
                     >
                         <EraserIcon />
-                        <span className="mr-2 hidden sm:inline">دردشة جديدة</span>
+                        <span className="mr-2 hidden sm:inline text-sm">دردشة جديدة</span>
                     </button>
                 </div>
-            </header>
-
-            {/* Chat Messages Area with improved styling */}
-            <div className="flex-grow pt-28 pb-32 overflow-y-auto px-4">
-                <div className="w-full max-w-4xl mx-auto space-y-4">
+            </header>            {/* Scrollable Chat Messages Area */}
+            <div className="flex-1 overflow-y-auto overscroll-contain px-3 sm:px-4 py-4 pb-safe">
+                <div className="w-full max-w-4xl mx-auto space-y-3 sm:space-y-4 min-h-0">
                     {history.length === 0 && (
                         <div className="text-center py-12 animate-fade-in">
                             <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-gem-teal to-gem-blue flex items-center justify-center shadow-xl">
@@ -295,31 +293,29 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ grade, subject, history, 
                 </div>
             </div>
 
-            {/* Enhanced Input Area */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gem-onyx via-gem-onyx/95 to-transparent backdrop-blur-sm">
-                 <div className="max-w-4xl mx-auto">
-                     <form onSubmit={handleSubmit} className="flex items-center space-x-3 rtl:space-x-reverse">
+            {/* Sticky Input Area */}
+            <div className="flex-shrink-0 border-t border-gem-mist/30 bg-gem-slate/95 backdrop-blur-md shadow-lg sticky bottom-0 z-10 safe-bottom">
+                <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
+                    <form onSubmit={handleSubmit} className="flex items-end gap-2 sm:gap-3">
                         <input
                             ref={inputRef}
                             type="text"
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
                             placeholder="اكتب سؤالك هنا... 💬"
-                            className="flex-grow bg-gem-slate border-2 border-gem-mist/50 focus:border-gem-blue rounded-full py-3.5 px-6 focus:outline-none focus:ring-2 focus:ring-gem-blue/20 transition-all duration-200 shadow-md hover:shadow-lg text-gem-offwhite placeholder-gem-offwhite/50"
+                            className="flex-1 bg-white border-2 border-gem-mist/50 focus:border-gem-blue rounded-2xl py-2.5 sm:py-3 px-4 sm:px-5 focus:outline-none focus:ring-2 focus:ring-gem-blue/20 transition-all duration-200 text-sm sm:text-base text-gem-offwhite placeholder-gem-offwhite/50 resize-none min-h-[44px]"
                             disabled={isQueryLoading}
                         />
                         <button 
                             type="submit" 
                             disabled={isQueryLoading || !query.trim()} 
-                            className="p-3.5 bg-gradient-to-r from-gem-blue to-blue-500 hover:from-blue-500 hover:to-gem-blue rounded-full text-white disabled:from-gem-mist disabled:to-gem-mist transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:transform-none disabled:cursor-not-allowed" 
+                            className="p-3 sm:p-3.5 bg-gradient-to-r from-gem-blue to-blue-500 hover:from-blue-500 hover:to-gem-blue rounded-full text-white disabled:from-gem-mist disabled:to-gem-mist transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed flex-shrink-0 mb-0.5" 
                             title="إرسال الرسالة"
+                            aria-label="إرسال"
                         >
                             <SendIcon />
                         </button>
                     </form>
-                    <p className="text-center text-xs text-gem-offwhite/50 mt-2">
-                        اضغط Enter لإرسال رسالتك
-                    </p>
                 </div>
             </div>
 

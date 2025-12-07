@@ -5,7 +5,6 @@
 
 import React, { useState, useMemo } from 'react';
 import { curriculumData } from '../curriculumData';
-import BookIcon from './icons/BookIcon';
 
 interface SelectionScreenProps {
     onStartChat: (grade: string, subject: string) => void;
@@ -29,9 +28,8 @@ const SelectionScreen: React.FC<SelectionScreenProps> = ({ onStartChat }) => {
         <div className="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
             <div className="w-full max-w-xl text-center">
                 <div className="flex justify-center items-center mb-6">
-                    <BookIcon />
+                    <img src="/sudatutor-logo2.png" alt="SUDATUTOR Logo" className="h-32 w-auto" />
                 </div>
-                <h1 className="text-4xl sm:text-5xl font-bold mb-2 text-gem-offwhite">SUDATUTOR</h1>
                 <p className="text-gem-offwhite/70 mb-10">
                    مساعدك الدراسي الذكي للمناهج السودانية
                 </p>

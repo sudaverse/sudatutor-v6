@@ -1,0 +1,55 @@
+/* Mobile viewport fixes for proper keyboard handling */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Prevent zoom on input focus (iOS) */
+input, textarea, select {
+  font-size: 16px !important;
+}
+
+/* Smooth scrolling for chat */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Safe area padding for notched devices */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+  
+  .safe-bottom {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+  
+  .pb-safe {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Ensure viewport height works correctly on mobile */
+@supports (-webkit-touch-callout: none) {
+  /* iOS-specific height fix */
+  #root {
+    height: -webkit-fill-available;
+  }
+}
+
+/* Prevent body scroll when keyboard is open */
+body.keyboard-open {
+  position: fixed;
+  width: 100%;
+}
+
+
